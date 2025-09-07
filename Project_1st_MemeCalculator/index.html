@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: black;
+
+        }
+
+        .cal-body {
+            height: 400px;
+            border-radius: 10px;
+            border: 2px red;
+            background: #D9D9D9;
+            width: 277px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .c-display {
+            height: 88px;
+            /* width: 247px; */
+            background-color: #FBF8F8;
+            border-radius: 10px;
+
+        }
+
+        .c-display-error {
+            height: 90px;
+            /* Remove the fixed width so it can be flexible if needed. */
+            /* width: 247px; */
+            background-color: #FBF8F8;
+            border-radius: 10px;
+            display: flex;
+            /* Keep this if you want to use flexbox for alignment */
+            justify-content: center;
+            /* Horizontally centers the image */
+            align-items: center;
+            /* Vertically centers the image */
+        }
+
+        .c-display-error img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cal-body ">
+            <div class="col-10 mx-auto">
+                <p class="c-title d-flex fw-light justify-content-around mb-0 pt-2">Meme Calculator</p>
+                <!-- display  -->
+                <div class=" c-display d-flex position-relative">
+                    <div class="position-absolute bottom-0 end-0">
+                        <p class="text-sm-end p-1 " id="num-input"></p>
+                        <p class="text-sm-end p-1" id="num-result"></p>
+                    </div>
+                </div>
+                <!-- down part  -->
+                <div class="c-inputBody">
+                    <!---->
+                    <div class="d-flex mt-3">
+                        <!-- numeric buttons  -->
+                        <div class="col-9  ">
+                            <div class="col-10 d-flex justify-content-between p-2 ">
+                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                    value='1'>1</button>
+                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                    value='2'>2</button>
+                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                    value='3'>3</button>
+                            </div>
+                            <div class="col-10 d-flex justify-content-between p-2 ">
+                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                    value='4'>4</button>
+                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                    value='5'>5</button>
+                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                    value='6'>6</button>
+                            </div>
+                            <div class="col-10 d-flex justify-content-between p-2">
+                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                    value='7'>7</button>
+                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                    value='8'>8</button>
+                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                    value='9'>9</button>
+                            </div>
+                            <div class="col-10 d-flex justify-content-between p-2">
+                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                    value='0'>0</button>
+                            </div>
+                        </div>
+                        <!-- error with meme -->
+                        <div class="col-3">
+                            <div class=" c-display-error  mt-2 d-flex ">
+                                <img src="https://cdn.cdnstep.com/3Z9iM32IU8i9XEUjzhMs/4-1.thumb128.webp" alt=""
+                                    class="object-fit-contain">
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col d-flex justify-content-between">
+                        <button type="button" class="btn btn-light m-1" onclick='storeVal(this)' value='+'>+</button>
+                        <button type="button" class="btn btn-light m-1" onclick='storeVal(this)' value='-'>-</button>
+                        <button type="button" class="btn btn-light m-1" onclick='storeVal(this)' value='/'>/</button>
+                        <button type="button" class="btn btn-light m-1" onclick='storeVal(this)' value='*'>*</button>
+                        <button type="button" class="btn btn-light m-1" onclick='resVal(this)' value='='>=</button>
+                    </div>
+
+                </div>
+                <!-- last row of button -->
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        let numStr = "";
+
+        function storeVal(el) {
+
+            btnVal = el.getAttribute('value')
+
+            numStr += btnVal;
+            console.log(numStr);
+            document.getElementById("num-input").textContent = numStr;
+
+            // if(btnVal != '+' & btnVal !='-' & btnVal !='/' & btnVal !='*'){
+            // }
+            // else if(btnVal=='+'){
+            //     console.log("sum")
+            // }
+            //  else if(btnVal=='-'){
+            //     console.log("sum")
+            // }
+            //  else if(btnVal=='/'){
+            //     console.log("sum")
+            // }
+            //  else if(btnVal=='*'){
+            //     console.log("sum")
+            // }
+            //  else if(btnVal=='='){
+            //     console.log("sum")
+            // }
+        };
+        function resVal(el) {
+            result = eval(numStr);
+            document.getElementById("num-result").textContent = "=" + result;
+
+            numStr = "";
+            console.log(result);
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
