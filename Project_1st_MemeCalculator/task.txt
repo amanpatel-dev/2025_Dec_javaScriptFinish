@@ -1,0 +1,29 @@
+functionality
+
+    1- When enter two or operation same time it shows error at that moment
+    2- AC Button        
+    3 - previous calculations
+    4- Decimal Calculation
+    5- dont use eval()
+    6- long text get out of the box
+
+sticker conditions
+    1- 150 rupay dega
+    2- when 1 digit addtion happens
+    3- when divided by zero - koi senese hai iss baat ki
+    4- long calcutaion - sweating Meme
+    5- digit grater than 5 mulltiplication
+    6- user do more than 5 calulation- haye main to thak gyi.
+    7- 7crore
+
+animation 
+
+    1- Calculation answer should come liitle appering animation
+    2- overall calculator shoul show up with littile animation
+    3- some gifs must have effect like shake or zoom in 
+
+css
+
+    1- Improve button size and gif contaoner
+    2- border to make 3d effect
+    3- even button should be little3d
