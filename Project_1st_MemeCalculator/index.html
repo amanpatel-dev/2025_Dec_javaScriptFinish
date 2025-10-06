@@ -82,31 +82,31 @@
                         <!-- numeric buttons  -->
                         <div class="col-7  ">
                             <div class="col-12 d-flex justify-content-between p-2 ">
-                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                <button type="button" class="btn btn-light" onclick="onNumberClick(this)"
                                     value='1'>1</button>
-                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                <button type="button" class="btn btn-light" onclick='onNumberClick(this)'
                                     value='2'>2</button>
-                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                <button type="button" class="btn btn-light" onclick='onNumberClick(this)'
                                     value='3'>3</button>
                             </div>
                             <div class="col-12 d-flex justify-content-between p-2 ">
-                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                <button type="button" class="btn btn-light" onclick='onNumberClick(this)'
                                     value='4'>4</button>
-                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                <button type="button" class="btn btn-light" onclick='onNumberClick(this)'
                                     value='5'>5</button>
-                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                <button type="button" class="btn btn-light" onclick='onNumberClick(this)'
                                     value='6'>6</button>
                             </div>
                             <div class="col-12 d-flex justify-content-between p-2">
-                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                <button type="button" class="btn btn-light" onclick='onNumberClick(this)'
                                     value='7'>7</button>
-                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                <button type="button" class="btn btn-light" onclick='onNumberClick(this)'
                                     value='8'>8</button>
-                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                <button type="button" class="btn btn-light" onclick='onNumberClick(this)'
                                     value='9'>9</button>
                             </div>
                             <div class="col-12 d-flex justify-content-between p-2">
-                                <button type="button" class="btn btn-light" onclick='storeVal(this)'
+                                <button type="button" class="btn btn-light" onclick='onNumberClick(this)'
                                     value='0'>0</button>
                                      <button type="button" class="btn btn-light" onclick='clearScreen(this)'
                                     value='0'>AC</button>
@@ -116,8 +116,8 @@
                         <!-- error with meme -->
                         <div class="col-5">
                             <div class=" c-display-error  mt-2 d-flex ">
-                                <img id="myImage" src="https://cdn.cdnstep.com/3Z9iM32IU8i9XEUjzhMs/4-1.thumb128.webp" alt=""
-                                    class="object-fit-contain">
+                                <!-- <img id="myImage" src="https://cdn.cdnstep.com/3Z9iM32IU8i9XEUjzhMs/4-1.thumb128.webp" alt=""
+                                    class="object-fit-contain"> -->
                             </div>
                             <div class="c-display-error  mt-2 d-flex">
                                 <p class="error-msg"></p>
@@ -125,10 +125,12 @@
                         </div>
                     </div>
                     <div class=" col d-flex justify-content-between">
-                        <button type="button" class="btn btn-light m-1" onclick='storeVal(this)' value='+'>+</button>
-                        <button type="button" class="btn btn-light m-1" onclick='storeVal(this)' value='-'>-</button>
-                        <button type="button" class="btn btn-light m-1" onclick='storeVal(this)' value='/'>/</button>
-                        <button type="button" class="btn btn-light m-1" onclick='storeVal(this)' value='*'>*</button>
+                        <button type="button" class="btn btn-light m-1" onclick='onOperatorClick(this)' value='+'>+</button>
+                        <button type="button" class="btn btn-light m-1" onclick='onOperatorClick(this)' value='-'>-</button>
+                        <button type="button" class="btn btn-light m-1" onclick='onOperatorClick(this)' value='/'>/</button>
+                        <button type="button" class="btn btn-light m-1" onclick='onOperatorClick(this)' value='*'>*</button>
+                        <button type="button" class="btn btn-light m-1" onclick='onOperatorClick(this)' value='('>(</button>
+                        <button type="button" class="btn btn-light m-1" onclick='onOperatorClick(this)' value=')'>)</button>
                         <button type="button" class="btn btn-light m-1" onclick='resVal(this)' value='='>=</button>
                     </div>
 

@@ -1,11 +1,12 @@
 functionality
 
     1- When enter two or operation same time it shows error at that moment
-    2- AC Button        
+    ✅2- AC Button ----Done
     3 - previous calculations
     4- Decimal Calculation
-    5- dont use eval()
+    ✅5- dont use eval()-----Done
     6- long text get out of the box
+    7- delete num or oprator
 
 sticker conditions
     1- 150 rupay dega
